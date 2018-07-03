@@ -29,16 +29,27 @@
     border-bottom-left-radius:      6px;
     border-bottom-right-radius:     6px;
     cursor:                         pointer;
-    display:                        none;
+    height:                         0;
+    visibility:                     hidden;
+    opacity:                        0;
+    -webkit-transition:             height 300s 500ms ease-in, opacity 600ms ease-in;
+    -moz-transition:                height 300s 500ms ease-in, opacity 600ms ease-in;
+    -ms-transition:                 height 300s 500ms ease-in, opacity 600ms ease-in;
+    -o-transition:                  height 300s 500ms ease-in, opacity 600ms ease-in;
+    transition:                     height 300s 500ms ease-in, opacity 600ms ease-in;
 }
 .employees .bio:hover {
     background:                     #fafafa;
 }
 .selected .bio{
-    display:                        block;
+    height:                         auto;
+    visibility:                     visible;
+    opacity:                        1;
     padding:                        1em;
     margin:                         0 0 0.5em 0;
+    box-shadow:                     0 1px 4px 0 rgba(0,41,89,.1);
 }
 .selected h2{
     background-color:               #ddd;
+    box-shadow:                     0 1px 4px 0 rgba(0,41,89,.1);
 }
