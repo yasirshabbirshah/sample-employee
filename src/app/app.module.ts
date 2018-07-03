@@ -1,12 +1,12 @@
-import { NgModule }             from '@angular/core';
-import { BrowserModule }        from '@angular/platform-browser';
-import { HttpClientModule }     from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
-import { HttpClientInMemoryWebApiModule }   from 'angular-in-memory-web-api';
-import { InMemoryDataService }              from './in-memory-data.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
-import { AppRoutingModule }     from './app-routing.module';
-import { EmployeesComponent }   from './employee/employees.component';
+import { AppRoutingModule } from './app-routing.module';
+import { EmployeesComponent } from './employee/employees.component';
 
 @NgModule({
     imports: [
@@ -19,7 +19,6 @@ import { EmployeesComponent }   from './employee/employees.component';
             InMemoryDataService, { dataEncapsulation: false }
         )
     ],
-    
     declarations: [ EmployeesComponent ],
     bootstrap:    [ EmployeesComponent ]
 })

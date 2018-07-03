@@ -1,35 +1,35 @@
-import { Component, OnInit }  from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { EmployeeService }    from '../employee.service';
-import { Employee }           from '../employee';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
 
 @Component({
-    selector:     'app-employees',
-    templateUrl:  './employees.component.html',
-    styleUrls:    [ './employees.component.css' ]
+  selector:     'app-employees',
+  templateUrl:  './employees.component.html',
+  styleUrls:    [ './employees.component.css' ]
 })
 
 export class EmployeesComponent implements OnInit {
-    employees          = [];
-    selectedEmployee   = 0;
-    title              = 'Employee List';
+  employees          = [];
+  selectedEmployee   = 0;
+  title              = 'Employee List';
 
-    constructor( private employeeService: EmployeeService ) { }
+  constructor( private employeeService: EmployeeService ) { }
 
-    ngOnInit() {
-        this.getEmployees();
-    }
+  ngOnInit() {
+    this.getEmployees();
+  }
 
-    getEmployees(): void {
-        this.employeeService.getEmployees()
-        .subscribe( employees => this.employees = employees );
-    }
+  getEmployees(): void {
+    this.employeeService.getEmployees()
+    .subscribe( employees => this.employees = employees );
+  }
 
-    onSelect( selectedEmployee ): void { 
-        this.selectedEmployee   = this.selectedEmployee === selectedEmployee ? null : selectedEmployee; 
-    }
+  onSelect( selectedEmployee ): void {
+    this.selectedEmployee   = this.selectedEmployee === selectedEmployee ? null : selectedEmployee;
+  }
 
-    onBioClicked( employee ): void {
-        alert( JSON.stringify( employee ) );
-    }
+  onBioClicked( employee ): void {
+    alert( JSON.stringify( employee ) );
+  }
 }
