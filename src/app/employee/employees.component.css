@@ -1,0 +1,44 @@
+.employees h1{
+    text-align:                     center;
+    font-size:                      1.5em;
+    margin-top:                     1em;
+}
+.employees ul{
+    margin:                         2em;
+    list-style-type:                none;
+    padding:                        0;
+}
+.employees h2 {
+    cursor:                         pointer;
+    background-color:               #eee;
+    padding:                        0.6em 1em 0.5em;
+    border-top-left-radius:         6px;
+    border-top-right-radius:        6px;
+    font-size:                      14px;
+    margin:                         0;
+}
+.employees h2:hover {
+    color:                          #3a3a3a;
+    background-color:               #ddd;
+}
+.employees li{
+    margin:                         4px 0;
+}
+.employees .bio {
+    border:                         1px solid #eee;
+    border-bottom-left-radius:      6px;
+    border-bottom-right-radius:     6px;
+    cursor:                         pointer;
+    display:                        none;
+}
+.employees .bio:hover {
+    background:                     #fafafa;
+}
+.selected .bio{
+    display:                        block;
+    padding:                        1em;
+    margin:                         0 0 0.5em 0;
+}
+.selected h2{
+    background-color:               #ddd;
+}

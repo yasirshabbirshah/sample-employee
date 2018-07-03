@@ -1,0 +1,9 @@
+<section class="employees">
+    <h1>{{title}}</h1>
+    <ul>
+        <li *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee">
+            <h2 class="name" (click)="onSelect( employee )">{{ employee.name | uppercase }}</h2> 
+            <p class="bio" (click)="onBioClicked( employee )">{{ employee.bio }}</p>
+        </li>
+    </ul>
+</section>
